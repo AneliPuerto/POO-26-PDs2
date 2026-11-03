@@ -33,6 +33,8 @@ public class AlertaProntoPago implements Observer, ElementoVisual {
                     System.out.println("El plazo de descuento por pronto pago ha expirado.");
                 } else {
                     System.out.println( "El descuento del 10% todavía está vigente.\n");
+                    System.out.println("Fecha límite de pronto pago: " + fechaLimite);
+
                 }
             }
         }

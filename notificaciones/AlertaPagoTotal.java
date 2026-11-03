@@ -32,23 +32,27 @@ public class AlertaPagoTotal implements Observer, ElementoVisual {
                     continue;
                 }
 
-                double saldoPendiente =
-                        s.getCostoFinal() - s.getMontoPagado();
+                double saldoPendiente = s.getCostoFinal() - s.getMontoPagado();
 
                 System.out.println("Stand ID: " + s.getIDStand()+ " Editorial: " + s.getEditorial());
 
-                if (saldoPendiente <= 0) {
+                System.out.println( "Fecha límite de liquidación: " + fechaPagoTotal);
 
-                    System.out.println("El stand ya está liquidado.\n");
+                System.out.println( "Saldo pendiente: $" + saldoPendiente );
+
+
+                if (saldoPendiente <= 0) {  System.out.println("El stand ya está liquidado.\n");
                     continue;
                 }
 
-                long diasRestantes = ChronoUnit.DAYS.between( hoy, fechaPagoTotal); //calcula la cantidad de días que transcurren 
-                // entre la fecha actual y la fecha límite de pago total
+                long diasRestantes = ChronoUnit.DAYS.between(hoy, fechaPagoTotal); //calcula la cantidad de días que transcurren  entre  la fecha actual y la fecha límite de pago total // 
+        
                 if (diasRestantes < 0) {
                     System.out.println("El plazo para pagar el costo total ha vencido.\n");
                 } else if (diasRestantes <= 5) {
                     System.out.println("La fecha límite de pago está próxima a vencer.");
+                       System.out.println("Días restantes: " + diasRestantes + "\n");
+
                 } else {
                     System.out.println("Plazo de pago total sigue en orden.\n");
                 }

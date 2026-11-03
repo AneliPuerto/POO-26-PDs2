@@ -41,12 +41,14 @@ public class AlertaVencimientoReserva implements Observer, ElementoVisual {
                 System.out.println("\nStand ID: " + s.getIDStand()+ " Editorial: " + s.getEditorial());
 
                 System.out.println( "Fecha de reserva: " + s.getFechaReserva());
+                System.out.println("Fecha límite de reserva: " + fechaVencimiento);
 
                 if (diasRestantes < 0) {
                 System.out.println( "La reserva ha vencido.\n");
 
                 } else if (diasRestantes <= 5) {
                     System.out.println("¡URGENTE! La reserva está próxima a vencer.");
+                    System.out.println("Diás restantes:" + diasRestantes + "\n");
                 } else {
                     System.out.println("La reserva todavía está dentro del plazo.\n");
                 }

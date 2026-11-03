@@ -66,7 +66,7 @@ public class Main {
 
         // Descuento por pronto pago próximo a vencer
         Stand stand2 = new Stand(
-                "B02",
+                "2",
                 18.0,
                 7500.0,
                 LocalDate.now().minusDays(4),
@@ -80,9 +80,9 @@ public class Main {
 
         // Fecha límite de pago 
         Stand stand3 = new Stand(
-                "C03",
+                "3",
                 20.0,
-                9000.0,
+                1000.0,
                 LocalDate.now().minusDays(10),
                 LocalDate.now().minusDays(5),
                 LocalDate.now().plusDays(2),

@@ -21,7 +21,5 @@ Diseñar e implementar en Java un sistema de notificaciones dentro del sistema a
 ## Requisitos No Funcionales 
 |ID | Requerimiento |Descripción |
 |---|---|---|
-|RNF-01| Tecnología |El sistema debe ser desarrollado en el lenguaje de programación Java.|
-|RNF-02 |Interfaz de Usuario | La interacción con el usuario, la visualización de la información de los stands y los datos del sistema deben mostrarse a través de la terminal. |
 |RNF-03| Sistema de Notificaciones | Las notificaciones del sistema (vencimiento de reservas, pronto pago y fechas límite) deben imprimirse de manera clara y directa en la terminal. |
 |RFN-04| Actualización en Tiempo Real | El cambio de estado de los stands (disponible, reservado, ocupado, bloqueado) debe actualizarse en tiempo de ejecución.|
